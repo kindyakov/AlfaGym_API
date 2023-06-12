@@ -1,0 +1,4 @@
+{
+  "URL_WhatsApp": "https://whatsgate.ru/api/v1/send",
+  "URL_Telegram": "https://api.callmebot.com/telegram/group.php"
+}
