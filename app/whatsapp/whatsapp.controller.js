@@ -15,13 +15,8 @@ export const whatsAppSendMessageTariff = async (req, res) => {
       },
       body: JSON.stringify(data),
     });
-
-    if (response.ok) {
-      res.json(response)
-    } else {
-      res.status(400)
-      throw new Error('Ошибка при выполнении запроса: ' + response.status);
-    }
+    console.log();
+    res.send(data)
   } catch (error) {
     res.status(400)
     throw new Error('Произошла ошибка: ' + error);
@@ -43,12 +38,7 @@ export const whatsAppSendMessageSimulator = async (req, res) => {
       body: JSON.stringify(data),
     });
 
-    if (response.ok) {
-      res.json(response)
-    } else {
-      res.status(400)
-      throw new Error('Ошибка при выполнении запроса: ' + response.status);
-    }
+    res.json(response)
   } catch (error) {
     res.status(400)
     throw new Error('Произошла ошибка: ' + error);
