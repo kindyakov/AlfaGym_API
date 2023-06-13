@@ -9,7 +9,7 @@ export const telegramSendMessageTariff = async (req, res) => {
     const requestUrl = `${config.get('URL_Telegram')}?${queryString}`;
 
     const response = await fetch(requestUrl);
-    res.json(params)
+    res.json(response)
   } catch (error) {
     res.status(400)
     throw new Error('Произошла ошибка: ' + error);
@@ -25,7 +25,7 @@ export const telegramSendMessageSimulator = async (req, res) => {
 
     const response = await fetch(requestUrl);
 
-    res.json(params)
+    res.json(response)
   } catch (error) {
     res.status(400)
     throw new Error('Произошла ошибка: ' + error);
