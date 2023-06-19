@@ -1,7 +1,6 @@
 import 'colors'
 import express from "express";
 import cors from "cors";
-import path from 'path'
 import dotenv from 'dotenv'
 import { errorHandler } from './app/middleware/error.middleware.js';
 import WhatsappRoutes from './app/whatsapp/whatsapp.routes.js';
@@ -11,7 +10,6 @@ dotenv.config()
 
 const PORT = process.env.PORT || 8080;
 const app = express();
-const __dirname = path.resolve()
 
 app.use(cors()) // для отправки запросов с браузера
 app.use(express.json())

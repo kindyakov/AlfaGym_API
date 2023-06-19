@@ -15,11 +15,11 @@ export const whatsAppSendMessageTariff = async (req, res) => {
       },
       body: JSON.stringify(data),
     });
-    console.log();
-    res.send(data)
+
+    res.json(response)
   } catch (error) {
     res.status(400)
-    throw new Error('Произошла ошибка: ' + error);
+    throw new Error('Произошла ошибка: ' + error.message);
   }
 }
 
@@ -37,10 +37,9 @@ export const whatsAppSendMessageSimulator = async (req, res) => {
       },
       body: JSON.stringify(data),
     });
-
     res.json(response)
   } catch (error) {
     res.status(400)
-    throw new Error('Произошла ошибка: ' + error);
+    throw new Error('Произошла ошибка: ' + error.message);
   }
 }

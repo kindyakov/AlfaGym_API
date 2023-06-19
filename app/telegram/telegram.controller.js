@@ -12,7 +12,7 @@ export const telegramSendMessageTariff = async (req, res) => {
     res.json(response)
   } catch (error) {
     res.status(400)
-    throw new Error('Произошла ошибка: ' + error);
+    throw new Error('Произошла ошибка: ' + error.message);
   }
 }
 
@@ -28,6 +28,6 @@ export const telegramSendMessageSimulator = async (req, res) => {
     res.json(response)
   } catch (error) {
     res.status(400)
-    throw new Error('Произошла ошибка: ' + error);
+    throw new Error('Произошла ошибка: ' + error.message);
   }
 }
